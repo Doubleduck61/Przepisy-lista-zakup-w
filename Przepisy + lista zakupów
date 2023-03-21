@@ -5,15 +5,17 @@ while x==0:
     print("[1] Makaron z kurczakiem i warzywami")
     print("[2] Makaron z tuńczykiem")
     print("[3] Pizza Capriciosa")
-    print("[4] Jajecznicę")
+    print("[4] Jajecznica")
     print("[5] Makaron z pesto")
     print("[6] Kurczak z ryżem po Chińsku")
-    print("[7] Kotlety schabowe")
+    print("[7] Kotlety schabowe z ziemniakami")
     print("[8] Ziemniaki z kwaśnym mlekiem")
-    print("[9] Pizzę z tuńczykiem")
+    print("[9] Pizza z tuńczykiem")
     print("[10] Jednak nic, pokaż moją listę zakupów")
     print("[11] Wyjście z programu!")
-    print("[12] Dodaj pozycję do listy zakupów\n")
+    print("[12] Dodaj pozycję do listy zakupów")
+    print("[13] Wyszukiwarka\n")
+    dania=["Makaron z kurczakiem i warzywami","Makaron z tuńczykiem","Pizza Capriciosa","Jajecznica","Makaron z pesto","Kurczak z ryżem po Chińsku","Kotlety schabowe z ziemniakami","Ziemniaki z kwaśnym mlekiem","Pizza z tuńczykiem"]
     wybor=int(input())
     if wybor == 1:
         print("[1] Makaron z kurczakiem i warzywami")
@@ -27,7 +29,7 @@ while x==0:
         print("Czy chcesz dodać te składniki do Twojej listy?[T/N]")
         decyzja=input()
         if decyzja == "T" or decyzja == "t":
-            moja_lista.append(lista1)
+            moja_lista.extend(lista1)
             print("Powyższe składniki dodano do Twojej listy")
             yyy=input("Kliknij aby kontynuować...")
         else:
@@ -45,7 +47,7 @@ while x==0:
         print("Czy chcesz dodać te składniki do Twojej listy?[T/N]")
         decyzja=input()
         if decyzja == "T" or decyzja == "t":
-            moja_lista.append(lista2)
+            moja_lista.extend(lista2)
             print("Powyższe składniki dodano do Twojej listy")
             yyy=input("Kliknij aby kontynuować...")
         else:
@@ -63,7 +65,7 @@ while x==0:
         print("Czy chcesz dodać te składniki do Twojej listy?[T/N]")
         decyzja=input()
         if decyzja == "T" or decyzja == "t":
-            moja_lista.append(lista3)
+            moja_lista.extend(lista3)
             print("Powyższe składniki dodano do Twojej listy")
             yyy=input("Kliknij aby kontynuować...")
         else:
@@ -81,7 +83,7 @@ while x==0:
         print("Czy chcesz dodać te składniki do Twojej listy?[T/N]")
         decyzja=input()
         if decyzja == "T" or decyzja == "t":
-            moja_lista.append(lista4)
+            moja_lista.extend(lista4)
             print("Powyższe składniki dodano do Twojej listy")
             yyy=input("Kliknij aby kontynuować...")
         else:
@@ -99,7 +101,7 @@ while x==0:
         print("Czy chcesz dodać te składniki do Twojej listy?[T/N]")
         decyzja=input()
         if decyzja == "T" or decyzja == "t":
-            moja_lista.append(lista5)
+            moja_lista.extend(lista5)
             print("Powyższe składniki dodano do Twojej listy")
             yyy=input("Kliknij aby kontynuować...")
         else:
@@ -117,7 +119,7 @@ while x==0:
         print("Czy chcesz dodać te składniki do Twojej listy?[T/N]")
         decyzja=input()
         if decyzja == "T" or decyzja == "t":
-            moja_lista.append(lista6)
+            moja_lista.extend(lista6)
             print("Powyższe składniki dodano do Twojej listy")
             yyy=input("Kliknij aby kontynuować...")
         else:
@@ -135,7 +137,7 @@ while x==0:
         print("Czy chcesz dodać te składniki do Twojej listy?[T/N]")
         decyzja=input()
         if decyzja == "T" or decyzja == "t":
-            moja_lista.append(lista7)
+            moja_lista.extend(lista7)
             print("Powyższe składniki dodano do Twojej listy")
             yyy=input("Kliknij aby kontynuować...")
         else:
@@ -153,7 +155,7 @@ while x==0:
         print("Czy chcesz dodać te składniki do Twojej listy?[T/N]")
         decyzja=input()
         if decyzja == "T" or decyzja == "t":
-            moja_lista.append(lista8)
+            moja_lista.extend(lista8)
             print("Powyższe składniki dodano do Twojej listy")
             yyy=input("Kliknij aby kontynuować...")
         else:
@@ -171,7 +173,7 @@ while x==0:
         print("Czy chcesz dodać te składniki do Twojej listy?[T/N]")
         decyzja=input()
         if decyzja == "T" or decyzja == "t":
-            moja_lista.append(lista9)
+            moja_lista.extend(lista9)
             print("Powyższe składniki dodano do Twojej listy")
             yyy=input("Kliknij aby kontynuować...")
         else:
@@ -199,7 +201,21 @@ while x==0:
         print("[12] Dodaj pozycje na listę zakupów")
         produkt=input()
         dod=[produkt]
-        moja_lista.append(dod)
+        moja_lista.extend(dod)
         print("Produkt dodano do Twojej listy")
+        yyy=input("Kliknij aby kontynuować...")
+        x=0
+    elif wybor == 13:
+        print("[13] Wyszukiwarka")
+        print("Podaj piersze słowo dania które chcesz wyszukać:")
+        word=input()
+        z=0
+        p=len(dania)
+        while z<p:
+            wysz_jedz=(dania[z].startswith(word))
+            #print(dania[z].startswith(word))
+            if wysz_jedz==True:
+                print("["+str(z+1)+"]",dania[z])
+            z+=1
         yyy=input("Kliknij aby kontynuować...")
         x=0

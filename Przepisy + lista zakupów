@@ -1,3 +1,10 @@
+'''
+
+                            Online Python Compiler.
+                Code, Compile, Run and Debug python program online.
+Write your code in this editor and press "Run" button to execute it.
+
+'''
 x=0
 moja_lista=[]
 while x==0:
@@ -18,7 +25,12 @@ while x==0:
     if wybor == 1:
         print("[1] Makaron z kurczakiem i warzywami")
         lista1=["Makaron 300g","Pomidory x2","Papryka czerwona","Ząbek czosnku"]
-        print("Potrzebujesz kupić:\n",lista1)
+        print("Potrzebujesz kupić:")
+        ilosc=(len(lista1))
+        u=1
+        while u <= ilosc:
+            print(str(u)+".",lista1[u-1])
+            u+=1
         print("Czy chcesz dodać te składniki do Twojej listy?[T/N]")
         decyzja=input()
         if decyzja == "T" or decyzja == "t":
@@ -31,7 +43,12 @@ while x==0:
     elif wybor == 2:
         print("[2] Makaron z tuńczykiem")
         lista2=["Makaron 400g","Pomidory x1","Puszka tuńczyka"]
-        print("Potrzebujesz kupić:\n",lista2)
+        print("Potrzebujesz kupić:")
+        ilosc=(len(lista2))
+        u=1
+        while u <= ilosc:
+            print(str(u)+".",lista2[u-1])
+            u+=1
         print("Czy chcesz dodać te składniki do Twojej listy?[T/N]")
         decyzja=input()
         if decyzja == "T" or decyzja == "t":
@@ -44,7 +61,12 @@ while x==0:
     elif wybor == 3:
         print("[3] Pizza Capriciosa")
         lista3=["Spód do pizzy","Przecier pomidorowy mały","Szynka","Pieczarki","Kukurydza"]
-        print("Potrzebujesz kupić:\n",lista3)
+        print("Potrzebujesz kupić:")
+        ilosc=(len(lista3))
+        u=1
+        while u <= ilosc:
+            print(str(u)+".",lista3[u-1])
+            u+=1
         print("Czy chcesz dodać te składniki do Twojej listy?[T/N]")
         decyzja=input()
         if decyzja == "T" or decyzja == "t":
@@ -56,19 +78,126 @@ while x==0:
             x=0
     elif wybor == 4:
         print("[4] Jajecznicę")
+        lista4=["4 jajka","Szynka"]
+        print("Potrzebujesz kupić:")
+        ilosc=(len(lista4))
+        u=1
+        while u <= ilosc:
+            print(str(u)+".",lista4[u-1])
+            u+=1
+        print("Czy chcesz dodać te składniki do Twojej listy?[T/N]")
+        decyzja=input()
+        if decyzja == "T" or decyzja == "t":
+            moja_lista.append(lista4)
+            print("Powyższe składniki dodano do Twojej listy")
+            yyy=input("Kliknij aby kontynuować...")
+        else:
+            print("Anulowano, powrót do głównego menu")
+            x=0
     elif wybor == 5:
         print("[5] Makaron z pesto")
+        lista5=["Makaron 400g","Pomidory x1","Pesto"]
+        print("Potrzebujesz kupić:")
+        ilosc=(len(lista5))
+        u=1
+        while u <= ilosc:
+            print(str(u)+".",lista5[u-1])
+            u+=1
+        print("Czy chcesz dodać te składniki do Twojej listy?[T/N]")
+        decyzja=input()
+        if decyzja == "T" or decyzja == "t":
+            moja_lista.append(lista5)
+            print("Powyższe składniki dodano do Twojej listy")
+            yyy=input("Kliknij aby kontynuować...")
+        else:
+            print("Anulowano, powrót do głównego menu")
+            x=0
     elif wybor == 6:
         print("[6] Kurczak z ryżem po Chińsku")
+        lista6=["Kurczak 300g","Pomidor","Papryka czerwona","Ryż","Sos"]
+        print("Potrzebujesz kupić:")
+        ilosc=(len(lista6))
+        u=1
+        while u <= ilosc:
+            print(str(u)+".",lista6[u-1])
+            u+=1
+        print("Czy chcesz dodać te składniki do Twojej listy?[T/N]")
+        decyzja=input()
+        if decyzja == "T" or decyzja == "t":
+            moja_lista.append(lista6)
+            print("Powyższe składniki dodano do Twojej listy")
+            yyy=input("Kliknij aby kontynuować...")
+        else:
+            print("Anulowano, powrót do głównego menu")
+            x=0
     elif wybor == 7:
-        print("[7] Kotlety schabowe")
+        print("[7] Kotlety schabowe z ziemniakami")
+        lista7=["Schab bez kości 1kg","Mąka","Bułka tarta","3 jajka","Ziemniaki"]
+        print("Potrzebujesz kupić:")
+        ilosc=(len(lista7))
+        u=1
+        while u <= ilosc:
+            print(str(u)+".",lista7[u-1])
+            u+=1
+        print("Czy chcesz dodać te składniki do Twojej listy?[T/N]")
+        decyzja=input()
+        if decyzja == "T" or decyzja == "t":
+            moja_lista.append(lista7)
+            print("Powyższe składniki dodano do Twojej listy")
+            yyy=input("Kliknij aby kontynuować...")
+        else:
+            print("Anulowano, powrót do głównego menu")
+            x=0
     elif wybor == 8:
         print("[8] Ziemniaki z kwaśnym mlekiem")
+        lista8=["Ziemniaki","Śmietana 18%"]
+        print("Potrzebujesz kupić:")
+        ilosc=(len(lista8))
+        u=1
+        while u <= ilosc:
+            print(str(u)+".",lista8[u-1])
+            u+=1
+        print("Czy chcesz dodać te składniki do Twojej listy?[T/N]")
+        decyzja=input()
+        if decyzja == "T" or decyzja == "t":
+            moja_lista.append(lista8)
+            print("Powyższe składniki dodano do Twojej listy")
+            yyy=input("Kliknij aby kontynuować...")
+        else:
+            print("Anulowano, powrót do głównego menu")
+            x=0
     elif wybor == 9:
         print("[9] Pizzę z tuńczykiem")
+        lista9=["Spód do pizzy","Przecier pomidorowy mały","Tuńczyk"]
+        print("Potrzebujesz kupić:")
+        ilosc=(len(lista9))
+        u=1
+        while u <= ilosc:
+            print(str(u)+".",lista9[u-1])
+            u+=1
+        print("Czy chcesz dodać te składniki do Twojej listy?[T/N]")
+        decyzja=input()
+        if decyzja == "T" or decyzja == "t":
+            moja_lista.append(lista9)
+            print("Powyższe składniki dodano do Twojej listy")
+            yyy=input("Kliknij aby kontynuować...")
+        else:
+            print("Anulowano, powrót do głównego menu")
+            x=0
     elif wybor == 10:
         print("[10] Lista zakupów")
-        print("Oto Twoja lista zakupów:\n",moja_lista)
+        print("Oto Twoja lista zakupów:")
+        ilosc=(len(moja_lista))
+        if ilosc==0:
+            print("Nie masz nic w koszyku!")
+            yyy=input("Kliknij aby kontynuować...")
+            x=0
+        u=1
+        while u <= ilosc:
+            print(str(u)+".",moja_lista[u-1])
+            u+=1
+        yyy=input("Kliknij aby kontynuować...")
+        x=0
     elif wybor == 11:
         print("Wyjście z programu!")
         yyy=input("Kliknij aby kontynuować...")

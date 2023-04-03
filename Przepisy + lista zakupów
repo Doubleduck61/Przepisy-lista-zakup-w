@@ -1,121 +1,109 @@
+def short():
+    print(food_name)
+    to_buy()
+    decision()
+
 def to_buy():
     '''Ingredients with you need'''
     print("You need to buy:")
     global amount
-    amount=(len(lists))
-    u=1
+    amount = (len(lists))
+    u = 1
     while u <= amount:
         print(str(u)+".",lists[u-1])
-        u+=1
+        u += 1
+        
 def decision():
     '''Deciding to add ingredients to your shopping list'''
     print("Would you like to add these ingredients to your shopping list? [T/N]")
-    add_ingredients=input()
+    add_ingredients = input()
     if add_ingredients == "T" or add_ingredients == "t":
         my_list.extend(lists)
         print("The ingredients have been added to your list")
-        wait=input("Press button to continue..")
+        wait = input("Press button to continue...")
     else:
         print("Canceled, back to main menu")
-        x=0
-menu=["Pasta with chicken and vegetables","Pasta with tuna","Pizza Capriciosa","Scrambled eggs","Pasta with pesto","Chinese chicken with rice","Pork chops with potatoes","Potatoes with cream","Pizza with tuna"]
-length_menu=len(menu)
-other=["Jednak nic, pokaż moją listę zakupów","Wyjście z programu!","Dodaj pozycję do listy zakupów","Wyszukiwarka"]
-length_other=len(other)
-x=0
-my_list=[]
-while x==0:
+        x = 0
+menu = ["Pasta with chicken and vegetables","Pasta with tuna","Pizza Capriciosa","Scrambled eggs","Pasta with pesto","Chinese chicken with rice","Pork chops with potatoes","Potatoes with cream","Pizza with tuna"]
+length_menu = len(menu)
+other = ["Show my shopping list","Exit","Add another position to shopping list","Search"]
+length_other = len(other)
+x = 0
+my_list = []
+while x == 0:
     print("What do you want to eat?\n")
 
-    for i in range(0,length_menu):
+    for i in range(0,length_menu):      #List of food
         print(i+1,menu[i])
-    for i in range(0,length_other):
+    for i in range(0,length_other):     #Other's list
         print(length_menu+i+1,other[i])
+        
     try:
-        wybor=int(input())
+        answer = int(input())
     except ValueError:
-        print("Błędnie wprowadzona wartość")
+        print("Invalid value entered")
         break
-    if wybor <= 9:
-        food_name=(menu[wybor-1]+"!")
-    else:
-        other_name=(other[wybor-1-len(menu)])
-    if wybor == 1:
-        print(food_name)
-        lists=["Makaron","Pomidory x2","Papryka czerwona","Ząbek czosnku"]
-        to_buy()
-        decision()
-    elif wybor == 2:
-        print(food_name)
-        lists=["Makaron 400g","Pomidory x1","Puszka tuńczyka"]
-        to_buy()
-        decision()
-    elif wybor == 3:
-        print(food_name)
-        lists=["Spód do pizzy","Przecier pomidorowy mały","Szynka","Pieczarki","Kukurydza"]
-        to_buy()
-        decision()
-    elif wybor == 4:
-        print(food_name)
-        lists=["4 jajka","Szynka"]
-        to_buy()
-        decision()
-    elif wybor == 5:
-        print(food_name)
-        lists=["Makaron 400g","Pomidory x1","Pesto"]
-        to_buy()
-        decision()
-    elif wybor == 6:
-        print(food_name)
-        lists=["Kurczak 300g","Pomidor","Papryka czerwona","Ryż","Sos"]
-        to_buy()
-        decision()
-    elif wybor == 7:
-        print(food_name)
-        lists=["Schab bez kości 1kg","Mąka","Bułka tarta","3 jajka","Ziemniaki"]
-        to_buy()
-        decision()
-    elif wybor == 8:
-        print(food_name)
-        lists=["Ziemniaki","Śmietana 18%"]
-        to_buy()
-        decision()
-    elif wybor == 9:
-        print(food_name)
-        lists=["Spód do pizzy","Przecier pomidorowy mały","Tuńczyk"]
-        to_buy()
-        decision()
-    elif wybor == 10:
+    
+    if answer <= 9:                         #Loop for foods
+        food_name = (menu[answer-1]+"!")
+    else:                                   #Loop for others
+        other_name = (other[answer-1-len(menu)])
+    if answer == 1:
+        lists = ["Noodle","Tomatos x2","Red pepper","Garlic"]
+        short()
+    elif answer == 2:
+        lists = ["Noodle","Tomato","Tuna"]
+        short()
+    elif answer == 3:
+        lists = ["Pizza base","Tomato sos","Ham","Mushrooms","Corn"]
+        short()
+    elif answer == 4:
+        lists = ["4 eggs","Ham"]
+        short()
+    elif answer == 5:
+        lists = ["Nuddle","Tomato","Pesto"]
+        short()
+    elif answer == 6:
+        lists = ["Chicken breast","Tomato","Red pepper","Rice","Sweet-sour sos"]
+        short()
+    elif answer == 7:
+        lists = ["Pork","Flour","Breadcrumbs","3 eggs","Potatoes"]
+        short()
+    elif answer == 8:
+        lists = ["Potatoes","Cream 18%"]
+        short()
+    elif answer == 9:
+        lists = ["Pizza base","Tomato sos","Tuna"]
+        short()
+    elif answer == 10:
         print(other_name)
-        lists=my_list
+        lists = my_list
         to_buy()
-        if amount==0:
-            print("Nie masz nic w koszyku!")
-            x=0
+        if amount == 0:
+            print("You have nothing in your cart!")
+            x = 0
         wait=input("Press button to continue..")
-        x=0
-    elif wybor == 11:
+        x = 0
+    elif answer == 11:
         print(other_name)
-        wait=input("Press button to continue..")
-        x=1
-    elif wybor == 12:
+        wait = input("Press button to continue..")
+        x = 1
+    elif answer == 12:
         print(other_name)
-        produkt=input()
-        dod=[produkt]
-        my_list.extend(dod)
-        print("Produkt dodano do Twojej listy")
-        wait=input("Press button to continue..")
-        x=0
-    elif wybor == 13:
+        produkt = input()
+        my_list.extend([produkt])
+        print("The product has been added to your list")
+        wait = input("Press button to continue...")
+        x = 0
+    elif answer == 13:
         print(other_name)
-        print("Podaj piersze słowo dania które chcesz wyszukać:")
-        word=input()
-        z=0
-        p=len(menu)
-        while z<p:
-            find_food=(menu[z].startswith(word))
-            if find_food==True:
-                print("["+str(z+1)+"]",menu[z])
-            z+=1
-        wait=input("Press button to continue..")
-        x=0
+        print("Enter the first word of the dish you want to search for:")
+        key_word = input()
+        position = 0
+        while position < length_menu:
+            find_food = (menu[position].startswith(key_word))
+            if find_food == True:
+                print(str(position+1),menu[position])
+            position += 1
+        wait = input("Press button to continue...")
+        x = 0

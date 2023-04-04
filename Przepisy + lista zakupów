@@ -22,6 +22,8 @@ def decision():
         
 def short():
     print(food_name)
+    global lists
+    lists = lists[answer-1]
     to_buy()
     decision()
     
@@ -34,7 +36,16 @@ my_list = []
 
 while x == 0:
     print("What do you want to eat?\n")
-
+    list1 = ["Noodle","Tomatos x2","Red pepper","Garlic"]
+    list2 = ["Noodle","Tomato","Tuna"]
+    list3 = ["Pizza base","Tomato sos","Ham","Mushrooms","Corn"]
+    list4 = ["4 eggs","Ham"]
+    list5 = ["Nuddle","Tomato","Pesto"]
+    list6 = ["Chicken breast","Tomato","Red pepper","Rice","Sweet-sour sos"]
+    list7 = ["Pork","Flour","Breadcrumbs","3 eggs","Potatoes"]
+    list8 = ["Potatoes","Cream 18%"]
+    list9 = ["Pizza base","Tomato sos","Tuna"]
+    lists = [list1,list2,list3,list4,list5,list6,list7,list8,list9]
     for i in range(0,length_menu):      #List of food
         print(i+1,menu[i])
     for i in range(0,length_other):     #Other's list
@@ -51,31 +62,22 @@ while x == 0:
         else:                                   #Loop for others
             other_name = (other[answer-1-len(menu)])
     if answer == 1:
-        lists = ["Noodle","Tomatos x2","Red pepper","Garlic"]
         short()
     elif answer == 2:
-        lists = ["Noodle","Tomato","Tuna"]
         short()
     elif answer == 3:
-        lists = ["Pizza base","Tomato sos","Ham","Mushrooms","Corn"]
         short()
     elif answer == 4:
-        lists = ["4 eggs","Ham"]
         short()
     elif answer == 5:
-        lists = ["Nuddle","Tomato","Pesto"]
         short()
     elif answer == 6:
-        lists = ["Chicken breast","Tomato","Red pepper","Rice","Sweet-sour sos"]
         short()
     elif answer == 7:
-        lists = ["Pork","Flour","Breadcrumbs","3 eggs","Potatoes"]
         short()
     elif answer == 8:
-        lists = ["Potatoes","Cream 18%"]
         short()
     elif answer == 9:
-        lists = ["Pizza base","Tomato sos","Tuna"]
         short()
     elif answer == 10:
         print(other_name)
